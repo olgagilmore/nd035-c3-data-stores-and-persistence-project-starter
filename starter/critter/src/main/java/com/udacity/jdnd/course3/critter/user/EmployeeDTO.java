@@ -1,5 +1,6 @@
 package com.udacity.jdnd.course3.critter.user;
 
+import javax.persistence.*;
 import java.time.DayOfWeek;
 import java.util.Set;
 
@@ -11,6 +12,7 @@ public class EmployeeDTO {
     private long id;
     private String name;
     private Set<EmployeeSkill> skills;
+
     private Set<DayOfWeek> daysAvailable;
 
     public long getId() {

@@ -123,8 +123,9 @@ public class CritterFunctionalTest {
     public void testChangeEmployeeAvailability() {
         EmployeeDTO employeeDTO = createEmployeeDTO();
         EmployeeDTO emp1 = userController.saveEmployee(employeeDTO);
-        Assertions.assertNull(emp1.getDaysAvailable());
+        //Assertions.assertNull(emp1.getDaysAvailable());
 
+        Assertions.assertTrue(emp1.getDaysAvailable().isEmpty());
         Set<DayOfWeek> availability = Sets.newHashSet(DayOfWeek.MONDAY, DayOfWeek.TUESDAY, DayOfWeek.WEDNESDAY);
         userController.setAvailability(availability, emp1.getId());
 
